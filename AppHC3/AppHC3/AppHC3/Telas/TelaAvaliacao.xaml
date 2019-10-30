@@ -1,0 +1,387 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:messier16="clr-namespace:Messier16.Forms.Controls;assembly=Messier16.Forms.Controls"
+             mc:Ignorable="d"
+             x:Class="AppHC3.Telas.TelaAvaliacao"
+             Title="Avaliações">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout BackgroundColor="#2A6A98">
+                <StackLayout Margin="20">
+                    <!--1ª Avaliação - ATENDIMENTO PORTARIA-->
+                    <Frame BackgroundColor="#C4C4C4" CornerRadius="20">
+                        <StackLayout>
+                                <StackLayout Orientation="Horizontal" Spacing="50">
+                                    <StackLayout>
+                                        <Image Source="Icone_atendimentoPorteiro.png" HeightRequest="50" WidthRequest="50"/>
+                                    </StackLayout>
+                                    <StackLayout>
+                                        <Label Text="O Atendimento Prestado &#10; pela Portaria" HorizontalOptions="Center" HorizontalTextAlignment="Center"/>
+                                    </StackLayout>
+                                </StackLayout>
+                                <StackLayout>
+                                    <Grid>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="3*"></ColumnDefinition>
+                                            <ColumnDefinition Width="1*"></ColumnDefinition>
+                                        </Grid.ColumnDefinitions>
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="Auto"></RowDefinition>
+                                            <RowDefinition Height="Auto"></RowDefinition>
+                                        </Grid.RowDefinitions>
+
+                                        <messier16:RatingBar Rating="{Binding Rating, Mode=TwoWay}" FillColor="Yellow"  MaxRating="5" HeightRequest="50"/>
+                                        <Label Text="{Binding Rating}" Grid.Column="1" Grid.Row="0" VerticalOptions="Center" HorizontalOptions="CenterAndExpand" HorizontalTextAlignment="Center"></Label>
+                                    </Grid>
+                                </StackLayout>
+                                <StackLayout>
+                                    <Grid>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="2*"></ColumnDefinition>
+                                            <ColumnDefinition Width="1*"></ColumnDefinition>
+                                        </Grid.ColumnDefinitions>
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="Auto"></RowDefinition>
+                                            <RowDefinition Height="Auto"></RowDefinition>
+                                        </Grid.RowDefinitions>
+
+                                        <Label Text="Observação" Grid.Column="0" Grid.Row="0"/>
+                                        <Label Text="[ ] Nâo tive contato" Grid.Column="1" Grid.Row="0"/>
+                                    </Grid>
+                                </StackLayout>
+                        </StackLayout>
+                    </Frame>
+
+                    <!--2ª Avaliação - ATENDIMENTO RECEPÇÃO-->
+                    <Frame BackgroundColor="#C4C4C4" CornerRadius="20">
+
+                        <StackLayout>
+                            <StackLayout Orientation="Horizontal" Spacing="50">
+                                <StackLayout>
+                                    <Image Source="Icone_AtendimentoRecepcao.png" HeightRequest="50" WidthRequest="50"/>
+                                </StackLayout>
+                                <StackLayout >
+                                    <Label Text="O Atendimento Prestado  &#10; pela Recepção" HorizontalOptions="Center" HorizontalTextAlignment="Center"/>
+                                </StackLayout>
+                            </StackLayout>
+                            <StackLayout>
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="3*"></ColumnDefinition>
+                                        <ColumnDefinition Width="1*"></ColumnDefinition>
+                                    </Grid.ColumnDefinitions>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto"></RowDefinition>
+                                        <RowDefinition Height="Auto"></RowDefinition>
+                                    </Grid.RowDefinitions>
+
+                                    <messier16:RatingBar Rating="{Binding Rating, Mode=TwoWay}" FillColor="Yellow"  MaxRating="5" HeightRequest="50"/>
+                                    <Label Text="{Binding Rating}" Grid.Column="1" Grid.Row="0" VerticalOptions="Center" HorizontalOptions="CenterAndExpand" HorizontalTextAlignment="Center"></Label>
+                                </Grid>
+                            </StackLayout>
+                            <StackLayout>
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="2*"></ColumnDefinition>
+                                        <ColumnDefinition Width="1*"></ColumnDefinition>
+                                    </Grid.ColumnDefinitions>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto"></RowDefinition>
+                                        <RowDefinition Height="Auto"></RowDefinition>
+                                    </Grid.RowDefinitions>
+
+                                    <Label Text="Observação" Grid.Column="0" Grid.Row="0"/>
+                                    <Label Text="[ ] Nâo tive contato" Grid.Column="1" Grid.Row="0"/>
+                                </Grid>
+                            </StackLayout>
+                        </StackLayout>
+                    </Frame>
+
+                    <!--3ª Avaliação - ATENDIMENTO MÉDICO-->
+                    <Frame BackgroundColor="#C4C4C4" CornerRadius="20">
+
+                        <StackLayout>
+                            <StackLayout Orientation="Horizontal" Spacing="50">
+                                <StackLayout>
+                                    <Image Source="Icone_atendimentoMedico.png" HeightRequest="50" WidthRequest="50"/>
+                                </StackLayout>
+                                <StackLayout >
+                                    <Label Text="O Atendimento Prestado &#10; pelo(a) Médico(a)" HorizontalOptions="Center" HorizontalTextAlignment="Center"/>
+                                </StackLayout>
+                            </StackLayout>
+                            <StackLayout>
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="3*"></ColumnDefinition>
+                                        <ColumnDefinition Width="1*"></ColumnDefinition>
+                                    </Grid.ColumnDefinitions>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto"></RowDefinition>
+                                        <RowDefinition Height="Auto"></RowDefinition>
+                                    </Grid.RowDefinitions>
+
+                                    <messier16:RatingBar Rating="{Binding Rating, Mode=TwoWay}" FillColor="Yellow"  MaxRating="5" HeightRequest="50"/>
+                                    <Label Text="{Binding Rating}" Grid.Column="1" Grid.Row="0" VerticalOptions="Center" HorizontalOptions="CenterAndExpand" HorizontalTextAlignment="Center"></Label>
+                                </Grid>
+                            </StackLayout>
+                            <StackLayout>
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="2*"></ColumnDefinition>
+                                        <ColumnDefinition Width="1*"></ColumnDefinition>
+                                    </Grid.ColumnDefinitions>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto"></RowDefinition>
+                                        <RowDefinition Height="Auto"></RowDefinition>
+                                    </Grid.RowDefinitions>
+
+                                    <Label Text="Observação" Grid.Column="0" Grid.Row="0"/>
+                                    <Label Text="[ ] Nâo tive contato" Grid.Column="1" Grid.Row="0"/>
+                                </Grid>
+                            </StackLayout>
+                        </StackLayout>
+                    </Frame>
+
+
+                    <!--4ª Avaliação - ATENDIMENTO ENFERMEIRO-->
+                    <Frame BackgroundColor="#C4C4C4" CornerRadius="20">
+
+                        <StackLayout>
+                            <StackLayout Orientation="Horizontal" Spacing="50">
+                                <StackLayout>
+                                    <Image Source="Icone_atendimentoEnfermeiro.png" HeightRequest="50" WidthRequest="50"/>
+                                </StackLayout>
+                                <StackLayout >
+                                    <Label Text="Atendimento Prestado &#10; pelo(a) Enfermeiro(a)" HorizontalOptions="Center" HorizontalTextAlignment="Center"/>
+                                </StackLayout>
+                            </StackLayout>
+                            <StackLayout>
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="3*"></ColumnDefinition>
+                                        <ColumnDefinition Width="1*"></ColumnDefinition>
+                                    </Grid.ColumnDefinitions>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto"></RowDefinition>
+                                        <RowDefinition Height="Auto"></RowDefinition>
+                                    </Grid.RowDefinitions>
+
+                                    <messier16:RatingBar Rating="{Binding Rating, Mode=TwoWay}" FillColor="Yellow"  MaxRating="5" HeightRequest="50"/>
+                                    <Label Text="{Binding Rating}" Grid.Column="1" Grid.Row="0" VerticalOptions="Center" HorizontalOptions="CenterAndExpand" HorizontalTextAlignment="Center"></Label>
+                                </Grid>
+                            </StackLayout>
+                            <StackLayout>
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="2*"></ColumnDefinition>
+                                        <ColumnDefinition Width="1*"></ColumnDefinition>
+                                    </Grid.ColumnDefinitions>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto"></RowDefinition>
+                                        <RowDefinition Height="Auto"></RowDefinition>
+                                    </Grid.RowDefinitions>
+
+                                    <Label Text="Observação" Grid.Column="0" Grid.Row="0"/>
+                                    <Label Text="[ ] Nâo tive contato" Grid.Column="1" Grid.Row="0"/>
+                                </Grid>
+                            </StackLayout>
+                        </StackLayout>
+                    </Frame>
+
+
+                    <!--5ª Avaliação - ACOMODAÇÕES-->
+                    <Frame BackgroundColor="#C4C4C4" CornerRadius="20">
+
+                        <StackLayout>
+                            <StackLayout Orientation="Horizontal" Spacing="50">
+                                <StackLayout>
+                                    <Image Source="Icone_Acomadacao.png" HeightRequest="50" WidthRequest="50"/>
+                                </StackLayout>
+                                <StackLayout >
+                                    <Label Text="As Acomodações" HorizontalOptions="Center" HorizontalTextAlignment="Center"/>
+                                </StackLayout>
+                            </StackLayout>
+                            <StackLayout>
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="3*"></ColumnDefinition>
+                                        <ColumnDefinition Width="1*"></ColumnDefinition>
+                                    </Grid.ColumnDefinitions>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto"></RowDefinition>
+                                        <RowDefinition Height="Auto"></RowDefinition>
+                                    </Grid.RowDefinitions>
+
+                                    <messier16:RatingBar Rating="{Binding Rating, Mode=TwoWay}" FillColor="Yellow"  MaxRating="5" HeightRequest="50"/>
+                                    <Label Text="{Binding Rating}" Grid.Column="1" Grid.Row="0" VerticalOptions="Center" HorizontalOptions="CenterAndExpand" HorizontalTextAlignment="Center"></Label>
+                                </Grid>
+                            </StackLayout>
+                            <StackLayout>
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="2*"></ColumnDefinition>
+                                        <ColumnDefinition Width="1*"></ColumnDefinition>
+                                    </Grid.ColumnDefinitions>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto"></RowDefinition>
+                                        <RowDefinition Height="Auto"></RowDefinition>
+                                    </Grid.RowDefinitions>
+
+                                    <Label Text="Observação" Grid.Column="0" Grid.Row="0"/>
+                                    <Label Text="[ ] Nâo tive contato" Grid.Column="1" Grid.Row="0"/>
+                                </Grid>
+                            </StackLayout>
+                        </StackLayout>
+                    </Frame>
+
+
+                    <!--6ª Avaliação - INFORMAÇÃO RECEBIDA-->
+                    <Frame BackgroundColor="#C4C4C4" CornerRadius="20">
+
+                        <StackLayout>
+                            <StackLayout Orientation="Horizontal" Spacing="50">
+                                <StackLayout>
+                                    <Image Source="Icone_Informacao.png" HeightRequest="50" WidthRequest="50"/>
+                                </StackLayout>
+                                <StackLayout >
+                                    <Label Text="As Informações Recebidas &#10; pela Equipe" HorizontalOptions="Center" HorizontalTextAlignment="Center"/>
+                                </StackLayout>
+                            </StackLayout>
+                            <StackLayout>
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="3*"></ColumnDefinition>
+                                        <ColumnDefinition Width="1*"></ColumnDefinition>
+                                    </Grid.ColumnDefinitions>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto"></RowDefinition>
+                                        <RowDefinition Height="Auto"></RowDefinition>
+                                    </Grid.RowDefinitions>
+
+                                    <messier16:RatingBar Rating="{Binding Rating, Mode=TwoWay}" FillColor="Yellow"  MaxRating="5" HeightRequest="50"/>
+                                    <Label Text="{Binding Rating}" Grid.Column="1" Grid.Row="0" VerticalOptions="Center" HorizontalOptions="CenterAndExpand" HorizontalTextAlignment="Center"></Label>
+                                </Grid>
+                            </StackLayout>
+                            <StackLayout>
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="2*"></ColumnDefinition>
+                                        <ColumnDefinition Width="1*"></ColumnDefinition>
+                                    </Grid.ColumnDefinitions>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto"></RowDefinition>
+                                        <RowDefinition Height="Auto"></RowDefinition>
+                                    </Grid.RowDefinitions>
+
+                                    <Label Text="Observação" Grid.Column="0" Grid.Row="0"/>
+                                    <Label Text="[ ] Nâo tive contato" Grid.Column="1" Grid.Row="0"/>
+                                </Grid>
+                            </StackLayout>
+                            
+                        </StackLayout>
+                        
+                    </Frame>
+
+                    <!--7ª Avaliação - TEMPO DE ESPERA-->
+                    <Frame BackgroundColor="#C4C4C4" CornerRadius="20">
+
+                        <StackLayout>
+                            <StackLayout Orientation="Horizontal" Spacing="50">
+                                <StackLayout>
+                                    <Image Source="Icone_TempoEspera.png" HeightRequest="50" WidthRequest="50"/>
+                                </StackLayout>
+                                <StackLayout >
+                                    <Label Text="O Tempo de Espera" HorizontalOptions="Center" HorizontalTextAlignment="Center"/>
+                                </StackLayout>
+                            </StackLayout>
+                            <StackLayout>
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="3*"></ColumnDefinition>
+                                        <ColumnDefinition Width="1*"></ColumnDefinition>
+                                    </Grid.ColumnDefinitions>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto"></RowDefinition>
+                                        <RowDefinition Height="Auto"></RowDefinition>
+                                    </Grid.RowDefinitions>
+
+                                    <messier16:RatingBar Rating="{Binding Rating, Mode=TwoWay}" FillColor="Yellow"  MaxRating="5" HeightRequest="50"/>
+                                    <Label Text="{Binding Rating}" Grid.Column="1" Grid.Row="0" VerticalOptions="Center" HorizontalOptions="CenterAndExpand" HorizontalTextAlignment="Center"></Label>
+                                </Grid>
+                            </StackLayout>
+                            <StackLayout>
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="2*"></ColumnDefinition>
+                                        <ColumnDefinition Width="1*"></ColumnDefinition>
+                                    </Grid.ColumnDefinitions>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto"></RowDefinition>
+                                        <RowDefinition Height="Auto"></RowDefinition>
+                                    </Grid.RowDefinitions>
+
+                                    <Label Text="Observação" Grid.Column="0" Grid.Row="0"/>
+                                    <Label Text="[ ] Nâo tive contato" Grid.Column="1" Grid.Row="0"/>
+                                </Grid>
+                            </StackLayout>
+
+                        </StackLayout>
+
+                    </Frame>
+
+                    
+                    <!--8ª Avaliação - LIMPEZA DO AMBIENTE-->
+                    <Frame BackgroundColor="#C4C4C4" CornerRadius="20">
+
+                        <StackLayout>
+                            <StackLayout Orientation="Horizontal" Spacing="50">
+                                <StackLayout>
+                                    <Image Source="Icone_limpeza.png" HeightRequest="50" WidthRequest="50"/>
+                                </StackLayout>
+                                <StackLayout >
+                                    <Label Text="A Limpeza do Ambiente" HorizontalOptions="Center" HorizontalTextAlignment="Center"/>
+                                </StackLayout>
+                            </StackLayout>
+                            <StackLayout>
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="3*"></ColumnDefinition>
+                                        <ColumnDefinition Width="1*"></ColumnDefinition>
+                                    </Grid.ColumnDefinitions>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto"></RowDefinition>
+                                        <RowDefinition Height="Auto"></RowDefinition>
+                                    </Grid.RowDefinitions>
+
+                                    <messier16:RatingBar Rating="{Binding Rating, Mode=TwoWay}" FillColor="Yellow"  MaxRating="5" HeightRequest="50"/>
+                                    <Label Text="{Binding Rating}" Grid.Column="1" Grid.Row="0" VerticalOptions="Center" HorizontalOptions="CenterAndExpand" HorizontalTextAlignment="Center"></Label>
+                                </Grid>
+                            </StackLayout>
+                            <StackLayout>
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="2*"></ColumnDefinition>
+                                        <ColumnDefinition Width="1*"></ColumnDefinition>
+                                    </Grid.ColumnDefinitions>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto"></RowDefinition>
+                                        <RowDefinition Height="Auto"></RowDefinition>
+                                    </Grid.RowDefinitions>
+
+                                    <Label Text="Observação" Grid.Column="0" Grid.Row="0"/>
+                                    <Label Text="[ ] Nâo tive contato" Grid.Column="1" Grid.Row="0"/>
+                                </Grid>
+                            </StackLayout>
+
+                        </StackLayout>
+
+                    </Frame>
+
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

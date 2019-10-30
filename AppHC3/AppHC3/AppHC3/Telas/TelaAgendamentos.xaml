@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="AppHC3.Telas.TelaAgendamentos"
+             Title="Agendamentos">
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Avisos" IconImageSource="Icone_Aviso.png"/>
+        <ToolbarItem Text="Cartas" IconImageSource="Icone_Carta.png"/>
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <StackLayout Margin="20">
+            <ListView x:Name="ListaAgendamentos">
+                <ListView.ItemTemplate>
+                    <DataTemplate >
+                        <ViewCell >
+                            <StackLayout>
+                                <StackLayout Orientation="Horizontal" Spacing="30">
+                                    <!-- <Label Text="{Binding ImagemEspecialidade}"/> -->
+                                    <Image Source="Icone_Aviso.png" HeightRequest="30"/>
+                                    <Label Text="{Binding DataAgendamento}"/>
+                                </StackLayout>
+                                <StackLayout HorizontalOptions="Center">
+                                    <Label Text="{Binding Especialidade}"/>
+                                </StackLayout>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            
+        </StackLayout>
+    </ContentPage.Content>
+    
+</ContentPage>

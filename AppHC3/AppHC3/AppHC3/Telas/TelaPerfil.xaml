@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="AppHC3.Telas.TelaPerfil">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout BackgroundColor="#2A6A98" Padding="10">
+                <StackLayout Padding="30">
+                    <Image Source="Icone_PerfilSemFoto.png" HorizontalOptions="Center" VerticalOptions="Center" HeightRequest="150"/>
+                </StackLayout>
+                <StackLayout>
+                    <Label Text="Nome" FontSize="12" />
+                    <Label Text="Bruno Rodrigo da Silva" FontSize="20"/>
+                    <Label Text="Prontuario" FontSize="12"/>
+                    <Label Text="256000" FontSize="20"/>
+                    <Label Text="CPF" FontSize="12"/>
+                    <Label Text="568.589.658-80" FontSize="20"/>
+                    <Label Text="Telefone" FontSize="12"/>
+                    <Label Text="143455-5555" FontSize="20"/>
+                    <Label Text="Celular" FontSize="12"/>
+                    <Label Text="1499155-5555" FontSize="20"/>
+                    <Label Text="Data de Nascimento" FontSize="12"/>
+                    <Label Text="01/01/2000" FontSize="20"/>
+                    <Label Text="CEP" FontSize="12"/>
+                    <Label Text="17500-000" FontSize="20"/>
+                    <Label Text="Endereço" FontSize="12"/>
+                    <Label Text="Av. Sampaio Vidal" FontSize="20"/>
+                    <Label Text="Número" FontSize="12"/>
+                    <Label Text="201" FontSize="20"/>
+                    <Label Text="Complemento" FontSize="12"/>
+                    <Label Text="CASA" FontSize="20"/>
+                    <Label Text="Cidade" FontSize="12"/>
+                    <Label Text="Marília" FontSize="20"/>
+                    <Label Text="UF" FontSize="12"/>
+                    <Label Text="SP" FontSize="20"/>
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

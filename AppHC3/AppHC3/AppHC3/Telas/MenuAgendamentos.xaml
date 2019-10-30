@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<MasterDetailPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:pag="clr-namespace:AppHC3.Telas"
+             mc:Ignorable="d"
+             x:Class="AppHC3.Telas.MenuAgendamentos">
+    
+    <MasterDetailPage.Master>
+        <!--MENU-->
+        <ContentPage Title="Menu">
+            <StackLayout>
+                <StackLayout Padding="30">
+                    <Image Source="Icone_PerfilSemFoto.png" HorizontalOptions="Center" VerticalOptions="Center" HeightRequest="150"/>
+                </StackLayout>
+                <StackLayout Spacing="20">
+                    <Button Text="Configurações" BackgroundColor="Transparent" HorizontalOptions="FillAndExpand"/>
+                    <Button Text="Editar Perfil" BackgroundColor="Transparent" HorizontalOptions="FillAndExpand" Clicked="EntrarTelaPerfil"/>
+                    <Button Text="Cartas" BackgroundColor="Transparent" HorizontalOptions="FillAndExpand" VerticalOptions="Center"/>
+                    <Button Text="Avisos" BackgroundColor="Transparent" HorizontalOptions="FillAndExpand"/>
+                    <Button Text="Avaliação" BackgroundColor="Transparent" HorizontalOptions="FillAndExpand" Clicked="EntrarAvaliacao"/>
+                    
+                </StackLayout>
+            </StackLayout>
+        </ContentPage>
+    </MasterDetailPage.Master>
+    <MasterDetailPage.Detail>
+        <!--TELAS-->
+        <NavigationPage>
+            <x:Arguments>
+                <pag:TelaAgendamentos/>
+            </x:Arguments>
+        </NavigationPage>
+    </MasterDetailPage.Detail>
+</MasterDetailPage>

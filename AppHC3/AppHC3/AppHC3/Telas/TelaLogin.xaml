@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="AppHC3.Telas.TelaLogin"
+             Title="Teste">
+    <ContentPage.Content>
+        <RelativeLayout BackgroundColor="#2A6A98">
+            
+            <Image 
+               x:Name="LogoHC"
+               Source="LogoHCVersao2.png"
+               RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,Property=Width,Factor= 0.5}"
+               RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,Property=Height, Factor= 0.5}"
+               RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent,Property=Width, Factor=0.4, Constant=-60}" 
+               RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Factor=0.1, Property=Height, Constant=-50}" 
+            />
+            <Frame x:Name="Bloco1" 
+                  CornerRadius="20" 
+                  BackgroundColor="#C4C4C4"
+                  RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,Property=Width,Factor= 0.5}"
+                  RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent,Property=Width, Factor=0.4, Constant=-60}"
+                  RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToView,ElementName=LogoHC, Factor=1, Property=Height, Constant= 10}">
+                <Entry 
+                  x:Name="entryLogin"   
+                  TextColor="Black" 
+                  Placeholder="Digite seu Login"
+                />
+            </Frame>
+
+            <Frame 
+                  x:Name="Bloco2"
+                  CornerRadius="20"
+                  BackgroundColor="#C4C4C4"
+                  RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.5}"
+                  RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent,Property=Width, Factor=0.4, Constant=-60}"
+                  RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToView,ElementName=LogoHC, Factor=1, Property=Height, Constant= 100}">
+                <Entry 
+                  x:Name="entrySenha"
+                  TextColor="Black" 
+                  Placeholder="Digite sua Senha"  
+                  IsPassword="True"
+                />
+            </Frame>
+
+            <Button 
+               x:Name="btnEntrar" 
+               TextColor="Black" 
+               Text="Entrar" 
+               BorderColor="#C4C4C4"
+               Clicked="EntrarTelaAgendamentos"
+               CornerRadius="20"
+               RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.5}"
+               RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent,Property=Width, Factor=0.4, Constant=-60}"
+               RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Factor=0.9, Property=Height}"             
+            />
+        </RelativeLayout>
+    </ContentPage.Content>
+</ContentPage>
